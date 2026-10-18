@@ -1,21 +1,28 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | A Deeper Look Into URLs</title>
+  <!-- Connects this page to the stylesheet used across the website. -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- The header contains the site title and the menu used to move between pages. -->
   <header class="site-header">
     <a class="brand" href="index.html">URL Guide</a>
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a><a href="structure.html">URL Structure</a><a href="how-urls-work.html">How URLs Work</a><a href="security.html">Security</a><a href="concepts.html">Key Concepts</a><a href="references.html">References</a><a class="active" href="about.html">About</a>
     </nav>
   </header>
+
+  <!-- The main section introduces the author and explains the purpose of the project. -->
   <main class="container page-content">
     <p class="eyebrow">About the Author</p>
     <h1>About This Project.</h1>
+
+    <!-- This layout puts the profile initials beside the introduction. -->
     <section class="about-layout">
       <div class="profile-mark" aria-hidden="true">MW</div>
       <div>
@@ -25,6 +32,8 @@
         <p>The project builds on my first assignment, which covered the structure, purpose, history, and security of URLs. The goal is to make the topic easier to understand through short explanations, examples, and links to further reading.</p>
       </div>
     </section>
+
+    <!-- These bullet points summarize what I want the website to cover. -->
     <section class="content-section">
       <h2>Project Goals</h2>
       <ul>
@@ -34,8 +43,15 @@
         <li>Practice organizing information using HTML and styling it with CSS.</li>
       </ul>
     </section>
+
+    <!-- This note makes it clear that the site is for a class project. -->
     <aside class="notice">This website is an educational class project and is not an official website of Kennesaw State University.</aside>
   </main>
-  <footer class="site-footer"><p>This website is a class project for IT 3203. Visit the <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">IT 3203 course website</a>.</p></footer>
+
+  <!-- The footer includes the required link to the IT 3203 course website. -->
+  <footer class="site-footer">
+    <p>This website is a class project for IT 3203. Visit the <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">IT 3203 course website</a>.</p>
+  </footer>
 </body>
 </html>
+```
