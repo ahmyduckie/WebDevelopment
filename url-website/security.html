@@ -1,32 +1,45 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>URL Security | A Deeper Look Into URLs</title>
+  <!-- Uses the same stylesheet as the other pages to keep the design consistent. -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- The header contains the site title and links to the other pages. -->
   <header class="site-header">
     <a class="brand" href="index.html">URL Guide</a>
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a><a href="structure.html">URL Structure</a><a href="how-urls-work.html">How URLs Work</a><a class="active" href="security.html">Security</a><a href="concepts.html">Key Concepts</a><a href="references.html">References</a><a href="about.html">About</a>
     </nav>
   </header>
+
+  <!-- The main section covers common URL security issues and ways to browse more safely. -->
   <main class="container page-content">
     <p class="eyebrow">Topic 03</p>
     <h1>URL Security</h1>
     <p class="lead">A web address can provide clues about a destination, but a URL alone cannot guarantee that a website is safe.</p>
 
+    <!-- This section compares HTTP and HTTPS and explains the difference in protection. -->
     <section class="content-section">
       <h2>HTTP and HTTPS</h2>
       <p>HTTP is a protocol used for communication between browsers and web servers. HTTPS uses Transport Layer Security (TLS) to protect the connection. HTTPS can help protect information while it travels between the browser and server, but it does not automatically prove that a site is trustworthy.</p>
       <div class="comparison-grid">
-        <div class="info-panel"><h3>HTTP</h3><p>Does not provide the TLS protection used by HTTPS.</p></div>
-        <div class="info-panel"><h3>HTTPS</h3><p>Uses TLS to help protect data in transit and verify the server's certificate.</p></div>
+        <div class="info-panel">
+          <h3>HTTP</h3>
+          <p>Does not provide the TLS protection used by HTTPS.</p>
+        </div>
+        <div class="info-panel">
+          <h3>HTTPS</h3>
+          <p>Uses TLS to help protect data in transit and verify the server's certificate.</p>
+        </div>
       </div>
     </section>
 
+    <!-- These examples explain some common ways URLs can be misleading. -->
     <section class="content-section">
       <h2>Common URL Risks</h2>
       <ul class="risk-list">
@@ -37,6 +50,7 @@
       </ul>
     </section>
 
+    <!-- This checklist gives visitors some basic ways to avoid suspicious links. -->
     <section class="content-section">
       <h2>Safer Browsing Habits</h2>
       <ol>
@@ -48,8 +62,14 @@
       </ol>
     </section>
 
+    <!-- This notice highlights the main point visitors should remember about URL safety. -->
     <aside class="notice"><strong>Remember:</strong> A familiar-looking URL and an HTTPS connection are useful clues, not proof that a website is safe.</aside>
   </main>
-  <footer class="site-footer"><p>This website is a class project for IT 3203. Visit the <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">IT 3203 course website</a>.</p></footer>
+
+  <!-- The footer identifies this as a class project and links to the IT 3203 course website. -->
+  <footer class="site-footer">
+    <p>This website is a class project for IT 3203. Visit the <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">IT 3203 course website</a>.</p>
+  </footer>
 </body>
 </html>
+```

@@ -1,23 +1,29 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How URLs Work | A Deeper Look Into URLs</title>
+  <!-- Links to the stylesheet shared by all pages on the website. -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- This header keeps the site title and navigation menu consistent across pages. -->
   <header class="site-header">
     <a class="brand" href="index.html">URL Guide</a>
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a><a href="structure.html">URL Structure</a><a class="active" href="how-urls-work.html">How URLs Work</a><a href="security.html">Security</a><a href="concepts.html">Key Concepts</a><a href="references.html">References</a><a href="about.html">About</a>
     </nav>
   </header>
+
+  <!-- The main content explains what happens when a browser uses a URL. -->
   <main class="container page-content">
     <p class="eyebrow">Topic 02</p>
     <h1>How URLs Work</h1>
     <p class="lead">When someone enters a web address or clicks a link, the browser interprets the URL and uses it to request a resource.</p>
 
+    <!-- This ordered list breaks the process down into steps. -->
     <section class="content-section">
       <h2>From Address to Web Page</h2>
       <ol class="steps">
@@ -29,21 +35,30 @@
       </ol>
     </section>
 
+    <!-- This section explains how domain names and DNS help browsers find websites. -->
     <section class="content-section">
       <h2>Domain Names and DNS</h2>
       <p>Domain names are easier for people to read and remember than numeric network addresses. The Domain Name System (DNS) helps find the network information associated with a domain name so a browser can contact the correct host.</p>
+
+      <!-- The panel uses a sample URL to show how the host and path fit together. -->
       <div class="info-panel">
         <h3>Example</h3>
         <p>In <code>https://example.com/help</code>, the host is <code>example.com</code> and the path is <code>/help</code>. The browser uses these parts to determine which host to contact and what resource to request.</p>
       </div>
     </section>
 
+    <!-- This section links to the official standard for how browsers handle URLs. -->
     <section class="content-section">
       <h2>Why Standards Matter</h2>
       <p>URLs follow shared rules so browsers can interpret web addresses in a consistent way. The URL Standard maintained by WHATWG describes how modern browsers parse and process URLs. Consistent rules help websites and browsers work together across different systems.</p>
       <p>For more information, visit the <a href="https://url.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">WHATWG URL Standard</a>.</p>
     </section>
   </main>
-  <footer class="site-footer"><p>This website is a class project for IT 3203. Visit the <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">IT 3203 course website</a>.</p></footer>
+
+  <!-- The footer identifies the site as a class project and links to the course website. -->
+  <footer class="site-footer">
+    <p>This website is a class project for IT 3203. Visit the <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">IT 3203 course website</a>.</p>
+  </footer>
 </body>
 </html>
+```
