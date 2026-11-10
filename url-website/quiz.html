@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Test your understanding of URL structure, browser behavior, and URL security.">
+  <title>URL Knowledge Quiz | URL Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="quiz.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">URL Guide</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="structure.html">URL Structure</a><a href="how-urls-work.html">How URLs Work</a><a href="security.html">Security</a><a href="concepts.html">Key Concepts</a><a href="references.html">References</a><a href="about.html">About</a><a class="active" href="quiz.html" aria-current="page">Quiz</a>
+    </nav>
+</header>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="structure.html">URL Structure</a>
+      <a href="how-urls-work.html">How URLs Work</a>
+      <a href="security.html">Security</a>
+      <a href="concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+      <a class="active" href="quiz.html" aria-current="page">Quiz</a>
+    </nav>
+  </header>
+
+  <main class="container page-content quiz-page">
+
+    <p class="eyebrow">Check Your Understanding</p>
+    <h1>URL Knowledge Quiz</h1>
+
+    <p class="lead">
+      Test what you learned about URL components, how browsers
+      use web addresses, and safer browsing habits. There are
+      10 questions and you have 10 minutes to finish.
+    </p>
+
+    <!-- Quiz information and countdown timer -->
+    <section class="quiz-status" aria-label="Quiz status">
+
+      <div>
+        <span class="status-label">Time remaining</span>
+        <strong id="timer">10:00</strong>
+      </div>
+
+      <div>
+        <span class="status-label">Questions</span>
+        <strong>10</strong>
+      </div>
+
+      <div>
+        <span class="status-label">Passing score</span>
+        <strong>70%</strong>
+      </div>
+
+    </section>
+
+    <div id="time-warning" class="time-warning"
+         role="status" hidden>
+      One minute remaining. Submit your answers before time runs out.
+    </div>
+
+    <!-- Results are displayed here after submission -->
+    <section id="results" class="results-panel"
+             aria-live="polite" hidden>
+
+      <h2 id="result-heading">Quiz Results</h2>
+
+      <p id="overall-result"></p>
+
+      <div class="result-summary">
+
+        <div>
+          <span class="status-label">Your score</span>
+          <strong id="final-score"></strong>
+        </div>
+
+        <div>
+          <span class="status-label">Time used</span>
+          <strong id="time-used"></strong>
+        </div>
+
+      </div>
+
+      <h3>Question-by-question results</h3>
+
+      <ol id="answer-review" class="answer-review"></ol>
+
+      <button class="button secondary-button"
+              type="button" id="retake-button">
+        Retake Quiz
+      </button>
+
+    </section>
+
+    <!-- Start of quiz form -->
+    <form id="quiz-form" class="quiz-form">
+
+      <!-- Question 1 -->
+      <fieldset class="question-card">
+
+        <legend>
+          <span class="question-number">Question 1</span>
+          Fill in the blank
+        </legend>
+
+        <label for="q1">
+          The part at the beginning of a URL, such as
+          <code>https</code>, is called the ______.
+        </label>
+
+        <input type="text" id="q1" name="q1"
+               autocomplete="off"
+               placeholder="Enter your answer" required>
+
+      </fieldset>
+
+      <!-- Question 2 -->
+      <fieldset class="question-card">
+
+        <legend>
+          <span class="question-number">Question 2</span>
+          Fill in the blank
+        </legend>
+
+        <label for="q2">
+          The part of a URL that begins with a question mark
+          and can contain name-value pairs is called the ______.
+        </label>
+
+        <input type="text" id="q2" name="q2"
+               autocomplete="off"
+               placeholder="Enter your answer" required>
+
+      </fieldset>
+
+      <!-- Question 3 -->
+      <fieldset class="question-card">
+
+        <legend>
+          <span class="question-number">Question 3</span>
+          Multiple choice
+        </legend>
+
+        <p class="question-prompt">
+          What does the host portion of a URL identify?
+        </p>
+
+        <label class="choice">
+          <input type="radio" name="q3" value="a" required>
+          The section within a page
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q3" value="b">
+          The host or server the browser contacts
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q3" value="c">
+          The browser's display settings
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q3" value="d">
+          The page's text size
+        </label>
+
+      </fieldset>
+
+      <!-- Question 4 -->
+      <fieldset class="question-card">
+
+        <legend>
+          <span class="question-number">Question 4</span>
+          Multiple choice
+        </legend>
+
+        <p class="question-prompt">
+          Which URL component identifies a resource or route on a host?
+        </p>
+
+        <label class="choice">
+          <input type="radio" name="q4" value="a" required>
+          Scheme
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q4" value="b">
+          Fragment
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q4" value="c">
+          Path
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q4" value="d">
+          Port
+        </label>
+
+      </fieldset>
+
+      <!-- Question 5 -->
+      <fieldset class="question-card">
+
+        <legend>
+          <span class="question-number">Question 5</span>
+          Multiple choice
+        </legend>
+
+        <p class="question-prompt">
+          What is the main purpose of DNS?
+        </p>
+
+        <label class="choice">
+          <input type="radio" name="q5" value="a" required>
+          To style a web page
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q5" value="b">
+          To help find the network address associated with a domain name
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q5" value="c">
+          To encrypt every file on a website
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q5" value="d">
+          To create URL fragments
+        </label>
+
+      </fieldset>
+
+      <!-- Question 6 -->
+      <fieldset class="question-card">
+
+        <legend>
+          <span class="question-number">Question 6</span>
+          Select all that apply
+        </legend>
+
+        <p class="question-prompt">
+          Which of the following can be components of a URL?
+          Select all correct answers.
+        </p>
+
+        <label class="choice">
+          <input type="checkbox" name="q6" value="scheme">
+          Scheme
+        </label>
+
+        <label class="choice">
+          <input type="checkbox" name="q6" value="host">
+          Host
+        </label>
+
+        <label class="choice">
+          <input type="checkbox" name="q6" value="path">
+          Path
+        </label>
+
+        <label class="choice">
+          <input type="checkbox" name="q6" value="font">
+          Font size
+        </label>
+
+        <label class="choice">
+          <input type="checkbox" name="q6" value="fragment">
+          Fragment
+        </label>
+
+      </fieldset>
+
+      <!-- Question 7 -->
+      <fieldset class="question-card">
+
+        <legend>
+          <span class="question-number">Question 7</span>
+          Choose the best answer
+        </legend>
+
+        <label for="q7">
+          Which choice best describes an absolute URL?
+        </label>
+
+        <select id="q7" name="q7" required>
+
+          <option value="">Select an answer</option>
+
+          <option value="short">
+            A URL that contains only a page path
+          </option>
+
+          <option value="full">
+            A URL that includes the full address,
+            including its scheme and host
+          </option>
+
+          <option value="fragment">
+            A URL that contains only a fragment
+          </option>
+
+          <option value="query">
+            A URL that must contain a query parameter
+          </option>
+
+        </select>
+
+      </fieldset>
+
+      <!-- Question 8 -->
+      <fieldset class="question-card">
+
+        <legend>
+          <span class="question-number">Question 8</span>
+          True or false
+        </legend>
+
+        <p class="question-prompt">
+          HTTPS uses encryption to help protect information
+          sent between a browser and a server.
+        </p>
+
+        <label class="choice">
+          <input type="radio" name="q8" value="true" required>
+          True
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q8" value="false">
+          False
+        </label>
+
+      </fieldset>
+
+      <!-- Question 9 -->
+      <fieldset class="question-card">
+
+        <legend>
+          <span class="question-number">Question 9</span>
+          True or false
+        </legend>
+
+        <p class="question-prompt">
+          A website is guaranteed to be trustworthy just because
+          its URL begins with HTTPS.
+        </p>
+
+        <label class="choice">
+          <input type="radio" name="q9" value="true" required>
+          True
+        </label>
+
+        <label class="choice">
+          <input type="radio" name="q9" value="false">
+          False
+        </label>
+
+      </fieldset>
+
+      <!-- Question 10 -->
+      <fieldset class="question-card">
+
+        <legend>
+          <span class="question-number">Question 10</span>
+          Choose the best answer
+        </legend>
+
+        <label for="q10">
+          In the URL
+          <code>https://example.com/help#contact</code>,
+          what does <code>#contact</code> represent?
+        </label>
+
+        <select id="q10" name="q10" required>
+
+          <option value="">Select an answer</option>
+
+          <option value="scheme">The scheme</option>
+          <option value="host">The host</option>
+          <option value="fragment">The fragment</option>
+          <option value="path">The path</option>
+
+        </select>
+
+      </fieldset>
+
+      <!-- Quiz buttons -->
+      <div class="quiz-actions">
+
+        <button class="button" type="submit" id="submit-button">
+          Submit Answers
+        </button>
+
+        <button class="button secondary-button" type="reset">
+          Clear Answers
+        </button>
+
+      </div>
+
+      <p class="quiz-note">
+        Your answers are graded in this browser.
+        The quiz automatically submits when the 10-minute timer
+        reaches zero.
+      </p>
+
+    </form>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      This website is a class project for IT 3203.
+      Visit the
+      <a href="https://ksuweb.github.io/IT3203/"
+         target="_blank" rel="noopener noreferrer">
+        IT 3203 course website
+      </a>.
+    </p>
+  </footer>
+
+</body>
+</html>
